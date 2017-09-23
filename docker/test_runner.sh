@@ -9,6 +9,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
 echo "Downloading dependencies using composer..."
+php composer.phar config -g repo.packagist composer https://packagist.phpcomposer.com
 php composer.phar install --prefer-dist --no-interaction
 
 echo "Running tests..."
